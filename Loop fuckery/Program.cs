@@ -18,3 +18,17 @@ while (programOnline)
         Console.WriteLine("HAHA, Nerd!");
     }
 }
+
+bool gilltigtPris = false;
+decimal productPris = 0;
+do
+{
+    Console.WriteLine("Vänligen skriv in ett pris för din produkt.");
+    string inputPris = Console.ReadLine();
+    gilltigtPris = decimal.TryParse(inputPris, out productPris);
+
+    if (gilltigtPris) 
+    {
+        Console.Clear();
+    }
+} while (gilltigtPris);
